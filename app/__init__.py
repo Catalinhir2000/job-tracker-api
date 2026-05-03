@@ -10,7 +10,7 @@ def create_app():
     migrate.init_app(app, db)
     ma.init_app(app)
 
-    from app.models import User  # Import models to register them with SQLAlchemy
+    from app.models import User, Company, Application  # Import models to register them with SQLAlchemy
 
     @app.route("/")
     def index():
